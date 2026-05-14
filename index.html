@@ -20,7 +20,6 @@ box-sizing:border-box;
 body{
 font-family:'Poppins',sans-serif;
 overflow-x:hidden;
-overflow-y:auto;
 background:#4f6d7a;
 color:white;
 -webkit-overflow-scrolling:touch;
@@ -31,15 +30,16 @@ color:white;
 .slide{
 display:none;
 width:100%;
+padding:60px 20px;
+text-align:center;
+position:relative;
 min-height:100vh;
-padding:40px 20px;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-text-align:center;
-position:relative;
-overflow:hidden;
 }
+
+/* ANIMATION */
 
 .active{
 display:flex;
@@ -189,15 +189,8 @@ transform:rotate(-2deg);
 
 @media(max-width:768px){
 
-body{
-overflow-x:hidden;
-overflow-y:auto;
-}
-
 .slide{
-padding:35px 20px;
-min-height:100vh;
-height:auto;
+padding:40px 20px;
 }
 
 h1{
@@ -492,9 +485,21 @@ let currentSlide = 0;
 
 const slides = document.querySelectorAll('.slide');
 
-function nextSlide(){
+function showSlide(index){
 
-slides[currentSlide].classList.remove('active');
+slides.forEach(slide => {
+
+slide.style.display = "none";
+
+});
+
+slides[index].style.display = "flex";
+
+window.scrollTo(0,0);
+
+}
+
+function nextSlide(){
 
 currentSlide++;
 
@@ -504,9 +509,11 @@ currentSlide = slides.length - 1;
 
 }
 
-slides[currentSlide].classList.add('active');
+showSlide(currentSlide);
 
 }
+
+showSlide(currentSlide);
 
 </script>
 
