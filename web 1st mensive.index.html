@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Journey ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+overflow:hidden;
+color:white;
+background:#4f6d7a;
+}
+
+.slide{
+display:none;
+width:100%;
+min-height:100vh;
+padding:40px 20px;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.active{
+display:flex;
+animation:fade 0.8s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.denim{
+background-color:#4f6d7a;
+
+background-image:
+radial-gradient(rgba(128,0,32,0.13) 2px, transparent 2px),
+radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+
+background-size:40px 40px,25px 25px;
+background-position:0 0,12px 12px;
+}
+
+h1{
+font-size:42px;
+margin-bottom:20px;
+font-weight:600;
+}
+
+h2{
+font-size:30px;
+margin-bottom:20px;
+font-weight:500;
+}
+
+p{
+max-width:900px;
+font-size:18px;
+line-height:1.9;
+font-weight:300;
+}
+
+.row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+img{
+max-width:320px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.stamp{
+border:10px dashed white;
+padding:10px;
+background:white;
+}
+
+.arrow{
+position:absolute;
+right:30px;
+bottom:30px;
+font-size:45px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.arrow:hover{
+transform:translateX(5px);
+}
+
+.love{
+font-size:100px;
+cursor:pointer;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+.book{
+font-size:100px;
+cursor:pointer;
+}
+
+.maroon-love{
+position:absolute;
+font-size:35px;
+color:#800020;
+opacity:0.4;
+}
+
+.full{
+width:85%;
+max-width:550px;
+}
+
+.pin{
+border-radius:15px;
+transform:rotate(-2deg);
+}
+
+@media(max-width:768px){
+
+body{
+overflow-x:hidden;
+}
+
+.slide{
+padding:35px 20px;
+}
+
+h1{
+font-size:32px;
+}
+
+h2{
+font-size:24px;
+}
+
+p{
+font-size:16px;
+line-height:1.9;
+max-width:100%;
+}
+
+img{
+max-width:240px;
+}
+
+.full{
+width:95%;
+max-width:95%;
+}
+
+.row{
+flex-direction:column;
+gap:25px;
+}
+
+.stamp{
+padding:8px;
+border:8px dashed white;
+}
+
+.arrow{
+right:20px;
+bottom:20px;
+font-size:35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPEN -->
+<div class="slide active denim">
+
+<div class="love" onclick="nextSlide()">❤️</div>
+
+<h1>Open Our Journey</h1>
+
+</div>
+
+<!-- COUPLE -->
+<div class="slide denim">
+
+<h1>Meet the Couple</h1>
+
+<img src="icons2.jpg">
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- JAVIER -->
+<div class="slide denim">
+
+<div class="row">
+
+<img src="icons1.jpg" class="stamp">
+
+<div>
+
+<p>
+Nama: Javier Arkaan
+<br><br>
+
+Umur: 25 tahun otw 26 tahun
+<br><br>
+
+Hobi: iseng ciumin eja sampe dia ngamuk
+<br><br>
+
+Cita-cita: jadi kaya raya terus menikah sama eja
+</p>
+
+</div>
+
+</div>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- FEYZA -->
+<div class="slide denim">
+
+<div class="row">
+
+<div>
+
+<p>
+Nama: Feyza Alderick
+<br><br>
+
+Umur: 25 tahun
+<br><br>
+
+Hobi: ngedit video dia sama javier
+<br><br>
+
+Cita-cita: menikah sama javier
+</p>
+
+</div>
+
+<img src="icons3.jpg" class="stamp">
+
+</div>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- BOOK -->
+<div class="slide denim">
+
+<div class="book" onclick="nextSlide()">📖</div>
+
+<h2>Click Here</h2>
+
+</div>
+
+<!-- PDKT -->
+<div class="slide denim">
+
+<div class="row">
+
+<img src="sspdkt1.jpg" class="stamp">
+
+<p>
+5 April, awal aku memutuskan buat melakukan pendekatan yang serius sama kamu.
+</p>
+
+</div>
+
+<br><br>
+
+<div class="row">
+
+<p>
+terlalu tiba tiba ajakannya sampai kamu ragu hahaha
+</p>
+
+<img src="sspdkt2.jpg" class="stamp">
+
+</div>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- PDKT ACCEPT -->
+<div class="slide denim">
+
+<img src="sspdkt3.jpg" class="stamp">
+
+<br><br>
+
+<p>
+Tapi pada akhirnya kamu mau menerima ajakan pendekatan itu.
+</p>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- LOVE TEXT -->
+<div class="slide denim">
+
+<div class="maroon-love" style="top:10%;left:10%;">❤️</div>
+<div class="maroon-love" style="top:20%;right:15%;">❤️</div>
+<div class="maroon-love" style="bottom:15%;left:20%;">❤️</div>
+
+<p>
+setelah lampu hijau yang kamu kasih itu, aku jadi makin semangat buat kasih semua yang aku punya ke kamu, sebegitunya karena aku bener bener mau bisa jadi pasangan kamu, bisa mencintai kamu, dan bisa menerima cinta dari kamu.
+</p>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- JADIAN -->
+<div class="slide denim">
+
+<p>
+sampai akhirnya tanggal 15 april, kakak memberanikan diri buat meminta kamu menjalin hubungan yang lebih serius dari pdkt, tadinya mau ditanggal 14 tapi kata kamu tanggal 15 aja biar di tengah jadi aku penuhi. Sempet deg-degan parah tapi akhirnya lega karena kamu menerima aku jadi pasangan kamu hehehe
+</p>
+
+<br><br>
+
+<div class="row">
+
+<img src="ssjadian1.jpg" class="stamp">
+
+<img src="ssjadian2.jpg" class="stamp">
+
+</div>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- AFTER DATING -->
+<div class="slide denim">
+
+<div class="maroon-love" style="top:10%;left:10%;">❤️</div>
+<div class="maroon-love" style="top:20%;right:15%;">❤️</div>
+<div class="maroon-love" style="bottom:15%;left:20%;">❤️</div>
+
+<p>
+setelah jadian ya apa yang kita lakukan sama seperti orang pacaran pada umumnya, ngobrol, pelukan, ciuman, saling memberi cinta, dan aku sangat menikmati waktu setiap kita lagi berduaan. Walau aku lagi sibuk, kamu tetap ngerti dan gak nuntut aku begitupun sebaliknya, aku yang nungguin kamu pulang saat kamu sibuk. Semua itu benar benar hubungan yang aku impikan selama ini. Saling bercanda, saling mengingatkan, saling mengerti, saling memberi perhatian, saling mencintai. Hal hal sederhana yang belum pernah aku dapatkan sebelumnya. Terimakasih ya sayangkuu sudah mau menjadi pacar kakak. Kakak cinta banget sama kamu, Feyza Alderick.
+</p>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- BORDER KISS -->
+<div class="slide denim">
+
+<img src="borderkiss.jpg" class="full">
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- PHOTO COLLAGE -->
+<div class="slide denim">
+
+<img src="fullborder.jpg" class="full">
+
+<br><br>
+
+<div class="row">
+
+<img src="manipskiss.jpg" class="pin">
+
+<img src="manipsselca.jpg" class="pin">
+
+</div>
+
+<div class="arrow" onclick="nextSlide()">➜</div>
+
+</div>
+
+<!-- FINAL -->
+<div class="slide denim">
+
+<img src="mensive.jpg" class="full">
+
+<br><br>
+
+<h1>
+I love you, Feyza ❤️
+<br>
+Happy 1st Mensiversary buat kita ❤️
+</h1>
+
+</div>
+
+<script>
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll('.slide');
+
+function nextSlide(){
+
+slides[currentSlide].classList.remove('active');
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+
+currentSlide = slides.length - 1;
+
+}
+
+slides[currentSlide].classList.add('active');
+
+}
+
+</script>
+
+</body>
+</html>
