@@ -7,7 +7,6 @@
 
 <title>Our Journey ❤️</title>
 
-<!-- FONT POPPINS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -20,8 +19,11 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-overflow:hidden;
+overflow-x:hidden;
+overflow-y:auto;
+background:#4f6d7a;
 color:white;
+-webkit-overflow-scrolling:touch;
 }
 
 /* SLIDE */
@@ -58,7 +60,7 @@ transform:translateY(0);
 
 }
 
-/* BACKGROUND DENIM + LOVE */
+/* BACKGROUND */
 
 .denim{
 
@@ -183,16 +185,19 @@ border-radius:15px;
 transform:rotate(-2deg);
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:768px){
 
 body{
 overflow-x:hidden;
+overflow-y:auto;
 }
 
 .slide{
 padding:35px 20px;
+min-height:100vh;
+height:auto;
 }
 
 h1{
